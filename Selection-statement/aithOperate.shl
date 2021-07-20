@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "Enter first number : " a
+read a
+echo "Enter second number : " b
+read b
+echo "Enter third number : " c
+read c
+
+val=`expr $a + $b \* $c`
+echo "a + b * c : $val"
+
+val=`expr $c + $a   
