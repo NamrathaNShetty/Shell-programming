@@ -21,18 +21,6 @@ elif [ $p = 100000 ]
 then echo "Lakh"
 
 else
-	echo "No match "
+   echo "No match "
 fi
-
-
-
-
-
-
-
-
-
-
-
-
 

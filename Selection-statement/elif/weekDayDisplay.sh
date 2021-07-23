@@ -4,7 +4,7 @@ echo "Enter a number"
 read num
 
 if [  $num -eq 1 ]
-then 
+then
 echo "Sunday"
 
 elif [ $num -eq 2 ]
@@ -31,6 +31,7 @@ elif [ $num -eq 7 ]
 then
 echo "Saturday"
 
-else 
+else
 echo "not matched"
 fi
+

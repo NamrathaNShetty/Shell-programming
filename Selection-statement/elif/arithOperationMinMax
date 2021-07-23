@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 echo "Enter a:"
 read aNum
@@ -10,6 +10,7 @@ echo "Enter c:"
 read cNum
 
 calc() { awk "BEGIN{print $*}"; }
+
 
 op1=`calc $aNum+$bNum*$cNum`
 op2=`calc $aNum%$bNum+$cNum`
@@ -28,10 +29,9 @@ update_min_max()
     if (( $(echo "$1 > $max" |bc -l) ))
     then
      max=$1
-fi 
-    
+    fi
 
-    if(( $(echo "$1 < $min" |bc -l) ))
+    if (( $(echo "$1 < $min" |bc -l) ))
     then
      min=$1
     fi

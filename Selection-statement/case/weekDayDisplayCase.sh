@@ -1,8 +1,8 @@
 #!/bin/bash -x
 
 echo "enter a number"
-read n 
-case $n in 
+read n
+case $n in
 1) echo "Sunday" ;;
 2) echo "Monday" ;;
 3) echo "Tuesday" ;;
