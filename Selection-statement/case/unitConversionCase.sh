@@ -1,25 +1,23 @@
 #!/bin/bash -x
-inch=12
-echo "1 feet 2 inch 2 feet to meter 3 inch to feet 4 metre to feet"
-read -p "enter the number now" num
-case $num in
 
-1) inch=12
-read -p "enter the number of feet" feet
-result= echo " result " 'expr $inch\*$feet';;
+read -p "which type of conversion you want to make? 1.Feet-Inch 2.Feet-Meter 3.inch-Feet 4.Meter-Feet. Enter the respective Number : " x
 
-2) meter=3
-read -p "enter the number of feet" feet
-result= echo " result " 'expr $feet\*3';;
-
-3)
-read -p "enter the number of feet" feet
-echo "6 feet" ;;
-
-4)
-read -p "enter tge number of feet" feet
-echo "24 feet" $feet;;
-
-*)
-echo -n "no match";;
+case $x in
+		1) read -p "Enter the value  in Feets : " a
+			p=$(($a*12))
+			echo $a Feet is $p Inches 
+		;;
+		2) read -p "Enter the value in Feets : " b
+			q=$(($b/3))
+			echo $b Feet is $q Meters
+		;;
+		3)	read -p "Enter the value in Inches : " c
+			r=$(($c/12))
+			echo $c Inches is $r Feets
+		;;
+		4) read -p "Enter the values in Meters : " d
+			s=$(($d*3))
+			echo $d Meters is $s Feets
+		;;
+		*) echo "Select from 1 to 4"
 esac

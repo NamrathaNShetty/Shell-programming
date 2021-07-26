@@ -1,14 +1,16 @@
-#!/bin/bash -x
+#!/bin/bash
 
-read -p "enter the inches : " a
+meterConversion=0.3048
+acreConversion=43560
 
-feet= 12*inches
-echo $feet :: $feet
+calc() { awk "BEGIN{print $*}"; }
 
-#!/bin/bash -x
+feet=`calc 42/12`
 
-read -p "enter the inches : " a
+meter=`calc 60*40*$meterConversion`
 
-feet= 12*inches  
-echo $feet :: $feet
- 
+acres=`calc 25*60*40/$acreConversion`
+
+echo "In Feet: $feet"
+echo "In meters: $meter"
+echo "In acres: $acres"
